@@ -8,11 +8,14 @@ int main(int argc, char* argv[])
 	CommandInfo commandInfo=CommandInput(argc,++argv);	//1.读指令
 	ErrorMessage(commandInfo);
 
-	file File;											//2.选择文件
-	commandInfo.filePath=File.GetFilePathByGUI(commandInfo);
+	if (commandInfo.commandType.x)
+	{
+		file File;											//2.选择文件
+		commandInfo.filePath = File.GetFilePathByGUI(commandInfo);
+	}
 	ErrorMessage(commandInfo);
 
-	function Function=function(commandInfo);
+	function Function=function(commandInfo);			//3.计算文件信息
 	FileMessage(commandInfo,Function);
 	system("pause");
 	return 0;
@@ -50,7 +53,7 @@ void FileMessage(CommandInfo commandInfo, function Function)
 	}
 	if (commandType.l)
 	{
-		cout << "行数: \t" << Function.LineCount() << endl;
+		cout << "行数: \t\t" << Function.LineCount() << endl;
 	}
 	if (commandType.a)
 	{

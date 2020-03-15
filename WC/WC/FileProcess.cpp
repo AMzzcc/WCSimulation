@@ -26,7 +26,7 @@ CString file::getFilePathByGUI()
 	open.lpstrTitle = "选择文件";//窗口的标题
 	open.lpstrFile[0] = '\0'; //第一个字符串是过滤器描述的显示字符串
 	open.nMaxFile = MAX_PATH;  //指定lpstrFile缓冲的大小，以TCHARs为单位
-	open.lpstrFilter = "文本文件(*.txt)\0*.txt\0所有文件(*.*)\0*.*\0\0";  //打开文件类型
+	open.lpstrFilter = "文本文件(*.txt)\0*.txt\0C语言文件(*.c)\0*.c\0\0";  //打开文件类型
 	open.nFilterIndex = 1;  //指定在文件类型控件中当前选择的过滤器的索引
 	open.lpstrFileTitle = NULL; // 指向接收选择的文件的文件名和扩展名的缓冲（不带路径信息）。这个成员可以是NULL。
 	open.nMaxFileTitle = 0;  //指定lpstrFileTitle缓冲的大小，以TCHARs为单位

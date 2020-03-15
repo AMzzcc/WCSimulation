@@ -1,6 +1,7 @@
 #pragma once
 #include<iostream>
 #include<string>
+#include<fstream>
 using namespace std;
 typedef struct
 {
@@ -8,6 +9,7 @@ typedef struct
 	bool w = false;
 	bool l = false;
 	bool a = false;
+	bool x = false;
 }CommandType;
 typedef enum 
 {

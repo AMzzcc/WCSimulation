@@ -27,6 +27,10 @@ CommandInfo CommandInput(int commandNum,char* command[])
 				commandInfo.commandType.a = true;
 				++i;
 				break;
+			case'x':
+				commandInfo.commandType.x = true;
+				++i;
+				break;
 			default:
 				commandInfo.HasError(commandError);
 				++i;
@@ -36,6 +40,18 @@ CommandInfo CommandInput(int commandNum,char* command[])
 		}
 		else
 		{
+			ifstream file;
+			file.open(command[i], ios::in);
+			if (!file.is_open())
+			{
+				commandInfo.HasError(fileError);
+				break;
+			}
+			else
+			{
+				commandInfo.filePath = command[i];
+				break;
+			}
 			commandInfo.HasError(commandError);
 			break;
 		}
