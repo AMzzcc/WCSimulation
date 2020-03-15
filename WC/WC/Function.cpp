@@ -57,14 +57,14 @@ int function::wordCount(CommandInfo commandInfo)
 				charNum++;
 				continue;
 			}
-			else if(charNum>=2)
+			else if(charNum>=2)		//字符数大于2即为单词
 			{
 				charNum = 0;
 				wordNum++;
 			}
 		}
 	}
-	if(charNum>=2)
+	if(charNum>=2)		//避免末尾的单词没遇到其他字符导致数量丢失
 	{
 		wordNum++;
 	}
@@ -101,7 +101,7 @@ DLC function::dlcCount(CommandInfo commandInfo)
 		charNum = 0;
 		for (int i = 0; i < strlen(str); i++)
 		{
-			if (isNoteLine)//"/**/"
+			if (isNoteLine)//"/**/ 多行注释"
 			{
 				if (str[i] == '*' && (i + 1) < strlen(str))
 				{
@@ -124,7 +124,7 @@ DLC function::dlcCount(CommandInfo commandInfo)
 
 			if (str[i] == '/'&& (i + 1) < strlen(str))
 			{
-				if (str[i + 1] == '/')
+				if (str[i + 1] == '/')  //单行注释
 				{
 					dlc.noteLine++;
 					break;
@@ -142,13 +142,13 @@ DLC function::dlcCount(CommandInfo commandInfo)
 			}
 			
 		}
-		if (isNoteLine)
+		if (isNoteLine)  //多行注释跨行+1
 		{
 			dlc.noteLine++;
 		}
 		lineNum++;
 	}
-	if (charNum >= 2&&!isNoteLine)
+	if (charNum >= 2&&!isNoteLine) //避免末尾的单词没遇到其他字符导致数量丢失
 	{
 		dlc.codeLine++;
 	}

@@ -20,6 +20,5 @@ private:
 	int lineCount(CommandInfo commandInfo);
 	DLC dlcCount(CommandInfo commandInfo);
 	CommandInfo command_Info;
-
 };
 

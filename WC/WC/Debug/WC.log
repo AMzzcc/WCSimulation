@@ -1,1 +1,11 @@
-﻿  WC.vcxproj -> F:\C++\githubSE\SoftwareEngineering\WC\Debug\WC.exe
+﻿  CommandProcess.cpp
+  FileProcess.cpp
+  Function.cpp
+F:\C++\githubSE\SoftwareEngineering\WC\WC\Function.cpp(32,21): warning C4018: “<”: 有符号/无符号不匹配
+F:\C++\githubSE\SoftwareEngineering\WC\WC\Function.cpp(53,21): warning C4018: “<”: 有符号/无符号不匹配
+F:\C++\githubSE\SoftwareEngineering\WC\WC\Function.cpp(102,21): warning C4018: “<”: 有符号/无符号不匹配
+F:\C++\githubSE\SoftwareEngineering\WC\WC\Function.cpp(106,34): warning C4018: “<”: 有符号/无符号不匹配
+  wc.cpp
+  正在生成代码...
+F:\C++\githubSE\SoftwareEngineering\WC\WC\Function.cpp(125,32): warning C4018: “<”: 有符号/无符号不匹配
+  WC.vcxproj -> F:\C++\githubSE\SoftwareEngineering\WC\Debug\WC.exe
